@@ -17,13 +17,11 @@ interface Props {
 const Home = (props: Props) => {
     const [isDark, setIsDark] = useState(false);
     const router = useRouter();
-    const [host, setHost] = useState("");
 
     useEffect(() => {
         if (typeof window !== undefined) {
             setIsDark(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
         }
-        setHost(`${window.location.protocol}//${window.location.hostname}:${window.location.port}/images`);
     }, []);
 
     const handledClickImage = (event: React.MouseEvent<HTMLDivElement, MouseEvent>, pathname: string) => {
@@ -40,7 +38,7 @@ const Home = (props: Props) => {
                                 className="col-span-1 relative h-80 hover:opacity-90 cursor-pointer"
                                 onClick={(e) => handledClickImage(e, `/images/${image.name}`)}
                             >
-                                {host ? <Image alt="" src={`/images/${image.name}`} fill /> : null}
+                                <Image alt="" src={`/images/${image.name}`} fill />
                             </div>
                         );
                     })}

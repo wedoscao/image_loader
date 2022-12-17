@@ -9,7 +9,7 @@ const MainLayout: FunctionComponent<PropsWithChildren<Props>> = ({ children, isD
     return (
         <>
             <Header />
-            <div className={`w-full h-screen ${isDark ? `text-white bg-slate-900` : `text-black bg-white`}`}>
+            <div className={`w-full min-h-screen ${isDark ? `text-white bg-slate-900` : `text-black bg-white`}`}>
                 {children ? children : null}
             </div>
         </>
