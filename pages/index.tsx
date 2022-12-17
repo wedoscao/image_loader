@@ -35,7 +35,7 @@ const Home = (props: Props) => {
                         return (
                             <div
                                 key={image.id}
-                                className="col-span-1 relative h-80 hover:opacity-90 cursor-pointer"
+                                className="xl:col-span-1 lg:col-span-2 sm:col-span-3 col-span-6 h-80 relative hover:opacity-90 cursor-pointer"
                                 onClick={(e) => handledClickImage(e, `/images/${image.name}`)}
                             >
                                 <Image alt="" src={`/images/${image.name}`} fill />
