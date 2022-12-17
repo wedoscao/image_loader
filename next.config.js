@@ -5,11 +5,11 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: "http",
-                hostname: "localhost",
+                hostname: "**",
             },
             {
                 protocol: "https",
-                hostname: "image-loader-wedoscao.vercel.app",
+                hostname: "**",
             },
         ],
     },
