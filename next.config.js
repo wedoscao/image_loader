@@ -9,7 +9,7 @@ const nextConfig = {
             },
             {
                 protocol: "https",
-                hostname: "image-loader-my036auow-wedoscao.vercel.app",
+                hostname: "image-loader-wedoscao.vercel.app",
             },
         ],
     },
