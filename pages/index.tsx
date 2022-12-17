@@ -40,7 +40,7 @@ const Home = (props: Props) => {
                                 className="col-span-1 relative h-80 hover:opacity-90 cursor-pointer"
                                 onClick={(e) => handledClickImage(e, `/images/${image.name}`)}
                             >
-                                {host ? <Image alt="" src={`public/images/${image.name}`} fill /> : null}
+                                {host ? <Image alt="" src={`/images/${image.name}`} fill /> : null}
                             </div>
                         );
                     })}
