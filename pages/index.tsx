@@ -35,17 +35,19 @@ const Home = (props: Props) => {
         <HeadLayout>
             <MainLayout isDark={isDark}>
                 <div className="mt-16 grid h-screen w-full grid-cols-6">
-                    {props.data.map((image) => {
-                        return host ? (
-                            <div
-                                key={image.id}
-                                className="xl:col-span-1 lg:col-span-2 sm:col-span-3 col-span-6 h-80 relative hover:opacity-90 cursor-pointer"
-                                onClick={(e) => handledClickImage(e, `/images/${image.name}`)}
-                            >
-                                <Image alt="" src={`${host}/images/${image.name}`} fill />
-                            </div>
-                        ) : null;
-                    })}
+                    {host
+                        ? props.data.map((image) => {
+                              return (
+                                  <div
+                                      key={image.id}
+                                      className="xl:col-span-1 lg:col-span-2 sm:col-span-3 col-span-6 h-80 relative hover:opacity-90 cursor-pointer"
+                                      onClick={(e) => handledClickImage(e, `/images/${image.name}`)}
+                                  >
+                                      <Image alt="" src={`${host}/images/${image.name}`} fill />
+                                  </div>
+                              );
+                          })
+                        : null}
                 </div>
             </MainLayout>
         </HeadLayout>
