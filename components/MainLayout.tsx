@@ -2,16 +2,12 @@ import { FunctionComponent, PropsWithChildren } from "react";
 
 import Header from "./Header";
 
-interface Props {
-    isDark?: boolean;
-}
-const MainLayout: FunctionComponent<PropsWithChildren<Props>> = ({ children, isDark = false }) => {
+interface Props {}
+const MainLayout: FunctionComponent<PropsWithChildren<Props>> = ({ children }) => {
     return (
         <>
             <Header />
-            <div className={`w-full h-full ${isDark ? `text-white bg-slate-900` : `text-black bg-white`}`}>
-                {children ? children : null}
-            </div>
+            <div className={`w-full h-full`}>{children ? children : null}</div>
         </>
     );
 };
