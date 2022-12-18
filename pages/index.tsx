@@ -24,7 +24,7 @@ const Home = (props: Props) => {
             setIsDark(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
         }
 
-        setHost(`${window.location.protocol}//${window.location.host}`);
+        setHost(`${window.location.protocol}//${window.location.host}${window.location.pathname}`);
     }, []);
 
     const handledClickImage = (event: React.MouseEvent<HTMLDivElement, MouseEvent>, pathname: string) => {
