@@ -1,6 +1,6 @@
 import { FunctionComponent, PropsWithChildren } from "react";
 
-import Header from "./Header";
+import Header from "../components/Header";
 
 interface Props {}
 const MainLayout: FunctionComponent<PropsWithChildren<Props>> = ({ children }) => {

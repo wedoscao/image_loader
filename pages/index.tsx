@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
-import HeadLayout from "../components/HeadLayout";
-import MainLayout from "../components/MainLayout";
+import HeadLayout from "../layouts/HeadLayout";
+import MainLayout from "../layouts/MainLayout";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import path from "path";
